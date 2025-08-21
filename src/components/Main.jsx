@@ -4,7 +4,7 @@ import {content, heading, makers} from "../constants/index.js";
 
 const Main = () => (
     <section id="home" className={`flex md:flex-row flex-col justify-center py-30 relative`}>
-        <div className={`flex flex-col items-center justify-center text-white space-y-20`}>
+        <div className={`flex flex-col items-center justify-center text-white space-y-20 sm:py-15 py-4`}>
             <div>
                 <text className="font-sans text-white ss:text-[50px] text-6xl">{heading}</text>
             </div>
