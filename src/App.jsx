@@ -1,33 +1,21 @@
-import React from 'react';
-import {NavBar, Contact, Footer, Main, Gallery, Features, Item, Cart} from './components'
-import styles from "./style";
+import React, {useEffect, useState} from 'react';
+import {TransitionPage, MainPage} from './components/index.js'
 
-const App = () => (
+const App = () => {
+    const [showLogo, setShowLogo] = useState(true);
 
-        <div className={`h-screen bg-[url(./assets/background.jpg)] bg-cover`}>
-            <div className={`absolute inset-0 backdrop-blur-sm`}></div>
-            <div>
-                <div className={`${styles.boxWidth} ${styles.paddingX} fixed top-0 left-0 w-full z-50`}>
-                    <NavBar/>
-                </div>
-            </div>
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowLogo(false);
+        }, 3000); // 3 seconds
+        return () => clearTimeout(timer);
+    }, []);
 
-            <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-                <div className={`${styles.boxWidth}`}>
-                    <Main/>
-                </div>
-            </div>
-
-            <div className={`bg-black ${styles.paddingX} ${styles.paddingY} ${styles.flexCenter}`}>
-                <div className={`${styles.boxWidth}`}>
-                    <Gallery/>
-                    <Features/>
-                    <Contact/>
-                    <Footer/>
-                </div>
-            </div>
-
+    return (
+        <div className="App">
+            {showLogo ? <TransitionPage/> : <MainPage/>}
         </div>
+    );
 
-);
+};
 export default App;

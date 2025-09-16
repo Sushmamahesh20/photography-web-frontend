@@ -3,7 +3,7 @@ import {content, heading, makers} from "../constants/index.js";
 // import styles from '../style.js';
 
 const Main = () => (
-    <section id="home" className={`flex md:flex-row flex-col justify-center py-30 relative`}>
+    <section id="home" className={`flex md:flex-row flex-col justify-center relative`}>
         <div className={`flex flex-col items-center justify-center text-white space-y-20 sm:py-15 py-4`}>
             <div>
                 <text className="font-sans text-white ss:text-[50px] text-6xl">{heading}</text>
@@ -17,8 +17,6 @@ const Main = () => (
                 <text className="font-sans text-white ss:text-[10px] text-[15px] font-thin">{content}</text>
             </div>
         </div>
-
-
     </section>
 );
 

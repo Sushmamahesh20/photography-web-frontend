@@ -4,7 +4,7 @@ import {images} from '../constants/index.js';
 import {Link} from "react-router-dom";
 const Gallery = () => {
     return (
-        <div id="gallery" className="max-w-6xl mx-auto px-8 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 font-sans text-white">
+        <div id="gallery" className="max-w-6xl mx-auto px-8 pt-20 pb-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 font-sans text-white">
             {images.map((image) => (
                 <div key={image.id} className="flex flex-col items-start">
                         <Link to={`/item/${image.id}`}>

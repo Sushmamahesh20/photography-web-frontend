@@ -6,6 +6,9 @@ import Gallery from "./Gallery.jsx";
 import Item from "./Item.jsx";
 import Features from "./Features.jsx";
 import Cart from "./Cart.jsx";
+import Details from "./Details.jsx";
+import TransitionPage from "./TransitionPage.jsx";
+import MainPage from "./MainPage.jsx";
 export {
     NavBar,
     Main,
@@ -14,5 +17,8 @@ export {
     Gallery,
     Item,
     Features,
-    Cart
+    Cart,
+    Details,
+    TransitionPage,
+    MainPage
 };
