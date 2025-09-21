@@ -4,6 +4,12 @@ import styles from "../style.js";
 import {CartContext} from "../context/CartContextProvider.jsx";
 import {useNavigate} from "react-router-dom";
 
+// Create INR currency formatter
+const formatter = new Intl.NumberFormat('en-IN', {
+  style: 'currency',
+  currency: 'INR',
+});
+
 const Cart = () => {
     const {cart, } = useContext(CartContext);
     const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
