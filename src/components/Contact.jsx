@@ -18,7 +18,7 @@ const Contact = () => {
     };
 
     const phoneNumber = "919901558949";
-    const message = encodeURIComponent("Hello, I want to book a photography service!");
+    const message = encodeURIComponent("Hi there! Thanks for connecting. I’m excited to book a photography session with you and create amazing memories together!");
 
     const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
     return (
