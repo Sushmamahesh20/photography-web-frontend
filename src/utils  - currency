@@ -1,0 +1,20 @@
+// src/utils/currency.js
+
+export const USD_TO_INR_RATE = 83; // or any latest rate
+
+export function convertUsdToInr(usdAmount) {
+  const num = typeof usdAmount === 'string'
+    ? parseFloat(usdAmount.replace(/[^0-9.-]+/g, ''))
+    : usdAmount;
+
+  if (isNaN(num)) return '';
+
+  const inr = num * USD_TO_INR_RATE;
+
+  return inr.toLocaleString('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+}
